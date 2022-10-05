@@ -7,15 +7,16 @@ from pprint import pprint
 # ID = input("What is your GitHub User ID?\n")
 # print(ID)
 
-ID="BriannaPGarland"
+
 
 def returnRepos(ID):
+    listOfFinal=[]
     if ID != "": 
         try:
             url = f"https://api.github.com/users/{ID}/repos"
             userRepoList = requests.get(url).json()
         except: 
-            print("Sorry, User ID entered was not found. Please try again")
+            return "Sorry, User ID entered was not found. Please try again"
         
         else:
             for i in range(len(userRepoList)):
@@ -23,7 +24,10 @@ def returnRepos(ID):
                 url = f"https://api.github.com/repos/{ID}/{repoName}/commits"
                 listOfCommits = requests.get(url).json()
                 numOfCommits=len(listOfCommits)
+                listOfFinal.append("Repo: "+repoName+" Number of commits: "+str(numOfCommits))
                 print("Repo: "+repoName+" Number of commits: "+str(numOfCommits))
+            return (listOfFinal)
     else:
-        print("Error: No user ID was entered")
-returnRepos(ID)
+        return("Error: No user ID was entered")
+
+
