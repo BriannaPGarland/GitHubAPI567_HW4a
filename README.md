@@ -1,7 +1,5 @@
 # GitHubAPI567_HW4a
-
-[![build status of master](https://app.travis-ci.com/BriannaPGarland/GitHubAPI567_HW4a.svg?branch=main)](https://travis-ci.com/BriannaPGarland/GitHubAPI567_HW4a)
-https://app.travis-ci.com/BriannaPGarland/GitHubAPI567_HW4a.svg?branch=main
+[![BriannaPGarland](https://circleci.com/gh/BriannaPGarland/GitHubAPI567_HW4a.svg?style=svg)](https://app.circleci.com/pipelines/github/BriannaPGarland/GitHubAPI567_HW4a?branch=main&filter=all)
 
 ### Deliverable #2: Write a description of what you thought about when you were designing the code. What did "you" think was important to make it easy to test in the program. What are some challenges you faced during the assignment. 
 
