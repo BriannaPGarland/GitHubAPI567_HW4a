@@ -1,5 +1,8 @@
 # GitHubAPI567_HW4a
 
+[![build status of master](https://app.travis-ci.com/BriannaPGarland/Brianna-Garland-SSW567.svg?branch=main)](https://travis-ci.com/BriannaPGarland/Brianna-Garland-SSW567)
+https://app.travis-ci.com/BriannaPGarland/Brianna-Garland-SSW567.svg?branch=main
+
 ### Deliverable #2: Write a description of what you thought about when you were designing the code. What did "you" think was important to make it easy to test in the program. What are some challenges you faced during the assignment. 
 
 While completing this assignment I was able to push my self to view it from a completely different perspetive than I normally would. The Assignment said to think about this code as a tester rather than a developer which is not a position that we as college students are not put in often. I have also found my self thinking this way now in my other software engineering classes and it has made me change the way I code as well as how I advise others. During this assignment I was thinking about the different aspects of the code that would need to be tested like all of the different use cases that could be accessed through the different information that could be pulled in through the GitHub API. Since I wouldn't be able to specifically test different github scenario outputs without creating a new github account and giving it different situations, I had to think about the areas of the code I could access through the testing platform. 
