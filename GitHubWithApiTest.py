@@ -8,28 +8,29 @@ import json
 
 class GitHubWithAPITest(unittest.TestCase):
    
-    #testing the call for the usr
-    @patch('GitHubWithApi.get_usr_info')
+   #testing the call for the usr using sample provided in the link given in the assignment: https://realpython.com/testing-third-party-apis-with-mocks/#mocking-the-complete-service-behavior 
+   #testing a good call to the API
+   @patch('GitHubWithApi.get_usr_info')
     def test_good_call_to_API(self,mockGet):
         mockGet.returnValue.ok = True
         response = GitHubWithApi.get_usr_info('j-iuni')
         assert_is_not_none(response)
-        
+    #testing a bad call to the API    
     @patch('GitHubWithApi.get_usr_info')
     def test_bad_call_to_API(self,mockGet):
         mockGet.returnValue.ok = False
         response = GitHubWithApi.get_usr_info('j-iuni')
         assert_is_not_none(response)
         
-    #testing the call for the repo
+    #testing the good call for the repo
     @patch('GitHubWithApi.get_repo_info')
     def test_good_call_for_repo(self,mockGet):
         mockGet.returnValue.ok = True
         response = GitHubWithApi.get_repo_info('j-iuni','CS583-A-Deep-Learning')
         assert_is_not_none(response)
-#    # "Sorry, User ID entered was not found. Please try again" 
+
         
-    #Testing Responses 
+    #Testing Responses - testing specific call responses using the examples provided in the link given in the assignment https://realpython.com/testing-third-party-apis-with-mocks/#mocking-the-complete-service-behavior
     @patch('GitHubWithApi.returnRepos')
     def test_full_function_call(self,mockGet):
         mockGet.return_value = ['Repo: CS583-A-Deep-Learning Number of commits: 1']
