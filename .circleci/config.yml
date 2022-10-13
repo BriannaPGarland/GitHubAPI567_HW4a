@@ -11,6 +11,7 @@ jobs:
           command: |
             pip install pytest
             pip install requests
+            pip install nose requests
             pytest --junitxml=test-results/junit.xml GitHubWithApiTest.py
       - store_test_results:
           path: test-results/results.yml
